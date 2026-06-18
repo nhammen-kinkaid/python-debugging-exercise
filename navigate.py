@@ -2,6 +2,7 @@ import turtle
 
 # Set up the screen window
 window = turtle.Screen()
+window.setup(width=900, height=600)
 window.bgpic("maze.gif")
 
 # Create a visible turtle object
@@ -20,13 +21,13 @@ def click_handler(x, y):
   my_turtle.clear()
 
   my_turtle.pendown()
-  my_turtle.forward(200)
+  move_slowly(200)
   my_turtle.right(90)
-  my_turtle.forward(100)
+  move_slowly(100)
   my_turtle.right(45)
-  my_turtle.forward(200)
-  my_turtle.right(9)
-  my_turtle.circle(90)
+  move_slowly(200)
+  my_turtle.left(9)
+  my_turtle.circle(-90)
   my_turtle.penup()
 
 my_turtle.teleport(100, -200)
